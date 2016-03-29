@@ -8,7 +8,7 @@
 #include <ctime>
 
 int main(int argc, char* argv[]) {
-    Window* window = new Window("Fluid Solver");
+    Window* window = new Window("BioCrowds");
 
     FluidSolver* solver = SceneLoader::LoadScene(argv[1]);
     solver->init();

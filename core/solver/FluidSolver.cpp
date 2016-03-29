@@ -207,13 +207,6 @@ void FluidSolver::extrapolateVelocity() {
             if (k+1 < _MAC._gType.countZ() && _MAC._gType(i,j,k+1) == FLUID) {
 
             }
-
-            //size_t si, ei, sj, ej, sk, ek;
-            int count = 0;
-            //_MAC._gType.getNeighboorhood(i,j,k,1,si,ei,sj,ej,sk,ek) {
-
-
-            //_MAC._gU(i,j,k) = 2.f;
         }
     });
 }
@@ -226,7 +219,7 @@ void FluidSolver::updateParticlePositions(float step) {
             FluidParticle &particle = _particles[i];
             particle.pos_old = particle.pos;
 
-            glm::vec3 k1 = step*particle.vel; // step * velAt(pos)
+            glm::vec3 k1 = step*particle.vel;
             particle.pos += step * glm::vec3(
                     interpolateAttribute(particle.pos + 0.5f*k1, _MAC._gU),
                     interpolateAttribute(particle.pos + 0.5f*k1, _MAC._gV),

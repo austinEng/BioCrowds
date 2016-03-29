@@ -1,7 +1,7 @@
 # credit - base CMake config : Yining Karl Li , edited CMake config: Akshay Shah & Debanshu Singh
 
 #name your project
-project(FluidSolver)
+project(BioCrowds)
 cmake_minimum_required(VERSION 2.8)
 
 # set creates a variable
@@ -107,5 +107,5 @@ set(CORE_SRC
         core/util/math.h
         core/display/shaders/particle.frag.h core/display/shaders/particle.vert.h core/display/painters/ParticlesPainter.cpp core/display/painters/ParticlesPainter.h core/display/painters/Painter.cpp core/display/painters/Painter.h core/display/painters/BoxPainter.cpp core/display/painters/BoxPainter.h core/display/shaders/flat.vert.h core/display/shaders/flat.frag.h core/scenes/default.h core/camera/Camera.cpp core/camera/Camera.h core/solver/grid/Grid.cpp core/solver/grid/Grid.h core/solver/grid/MACGrid.cpp core/solver/grid/MACGrid.h core/solver/FluidParticle.h core/fileIO/ParticlesWriter.cpp core/fileIO/ParticlesWriter.h core/util/hacks.h core/display/painters/GridVectorAttributePainter.cpp core/display/painters/GridVectorAttributePainter.h core/display/shaders/gridAttr.geo.h core/util/flags.h core/display/painters/GridScalarAttributePainter.cpp core/display/painters/GridScalarAttributePainter.h core/display/shaders/gridScal.vert.h core/display/shaders/gridScal.frag.h)
 
-add_executable(FluidSolver ${CORE_SRC})
-target_link_libraries(FluidSolver ${CORE_LIBS})
+add_executable(BioCrowds ${CORE_SRC})
+target_link_libraries(BioCrowds ${CORE_LIBS})
